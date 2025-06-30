@@ -9,7 +9,7 @@ const App = () => {
       <header className="header">
         <div className="logo" />
         <input className="search-bar" type="text" placeholder="Pesquisar" />
-        
+
         <button className="login-btn">Entrar</button>
         <button className="register-btn">Registrar</button>
       </header>
@@ -21,9 +21,9 @@ const App = () => {
       <section className="section">
         <h2 className="section-title">Gratuitos:</h2>
         <div className="filters">
-          <input className="filter-input" type="text" />
-          <input className="filter-input" type="text" />
-          <input className="filter-input" type="text" />
+          <div className='filter-input'></div>
+          <div className='filter-input'></div>
+          <div className="filter-input"></div>
         </div>
         <div className="card-list">
           {[...Array(4)].map((_, i) => (
@@ -35,9 +35,9 @@ const App = () => {
       <section className="section">
         <h2 className="section-title">Pagos:</h2>
         <div className="filters">
-          <input className="filter-input" type="text" />
-          <input className="filter-input" type="text" />
-          <input className="filter-input" type="text" />
+          <div className='filter-input'></div>
+          <div className='filter-input'></div>
+          <div className="filter-input"></div>
         </div>
         <div className="card-list">
           {[...Array(5)].map((_, i) => (
