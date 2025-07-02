@@ -1,80 +1,18 @@
-import React from "react";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "../src/pages/HomeScreen/index";
+import Login from "../src/pages/LoginScreen/index";
+import Adm from "../src/pages/AdmScreen/index"
 
-const App = () => {
-  const Card = () => <div className="card" />;
-
+function App() {
   return (
-    <div className="container">
-      <header className="header">
-        <div className="logo" />
-        <input className="search-bar" type="text" placeholder="Pesquisar" />
-
-        <button className="login-btn">Entrar</button>
-        <button className="register-btn">Registrar</button>
-      </header>
-
-      <section className="banner">
-        <div className="banner-box" />
-      </section>
-
-      <section className="section">
-        <h2 className="section-title">Gratuitos:</h2>
-        <div className="filters">
-          <div className='filter-input'></div>
-          <div className='filter-input'></div>
-          <div className="filter-input"></div>
-        </div>
-        <div className="card-list">
-          {[...Array(4)].map((_, i) => (
-            <Card key={i} />
-          ))}
-        </div>
-      </section>
-
-      <section className="section">
-        <h2 className="section-title">Pagos:</h2>
-        <div className="filters">
-          <div className='filter-input'></div>
-          <div className='filter-input'></div>
-          <div className="filter-input"></div>
-        </div>
-        <div className="card-list">
-          {[...Array(5)].map((_, i) => (
-            <Card key={i} />
-          ))}
-        </div>
-      </section>
-
-      <footer className="footer">
-        <div className="footer-logo" />
-        <div className="footer-column">
-          <h4>Redes Sociais</h4>
-          <ul>
-            <li>Instagram</li>
-            <li>Facebook</li>
-            <li>X</li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h4>Sobre nós</h4>
-          <ul>
-            <li>Quem somos</li>
-            <li>Missão</li>
-            <li>Visão</li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h4>Contatos</h4>
-          <ul>
-            <li>Email</li>
-            <li>Telefone</li>
-            <li>Endereço</li>
-          </ul>
-        </div>
-      </footer>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/adm" element={<Adm />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
