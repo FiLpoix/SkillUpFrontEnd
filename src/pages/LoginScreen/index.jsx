@@ -19,7 +19,7 @@ export default function Login() {
           <button>Criar</button>
 
           <p className="login-text">
-            Já tem uma conta? <a href="#">Login</a>
+            Não tem conta? <a href="#">Registrar</a>
           </p>
         </div>
       </div>

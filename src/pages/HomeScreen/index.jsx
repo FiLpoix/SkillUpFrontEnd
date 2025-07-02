@@ -29,7 +29,7 @@ const Home = () => {
         <div className="filters">
           <div className='filter-input'></div>
           <div className='filter-input'></div>
-          <div className="filter-input"></div>
+          <div className='filter-input'></div>
         </div>
         <div className="card-list">
           {[...Array(5)].map((_, i) => (
